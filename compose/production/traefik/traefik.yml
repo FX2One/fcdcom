@@ -31,7 +31,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: 'Host(`community.fx2one.com`) || Host(`www.community.fx2one.com`)'
+      rule: 'Host(`community.fx2one.com`) || Host(`community.fx2one.com`)'
       entryPoints:
         - web-secure
       middlewares:
