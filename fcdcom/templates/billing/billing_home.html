@@ -1,6 +1,13 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
   <h1>Billing dashboard</h1>
   <p>Welcome to the home page</p>
+  {% if request.user.stripe_customer_id %}
+  <p>Your credit card details are already saved</p>
+  {% else %}
+  <p>{% trans 'Add a credit card here: ' %}</p>
+  <a href="{% url 'billing:checkout' %}" class="btn-primarmy btn">{% trans 'Add Credit Card' %}</a>
+  {% endif %}
 {% endblock %}
