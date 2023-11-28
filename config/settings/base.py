@@ -287,9 +287,9 @@ CELERY_TASK_SOFT_TIME_LIMIT = 60
 CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 
 CELERY_BEAT_SCHEDULE = {
-    'validate_user_credit_cards': {
-        'task': 'fcdcom.billing.tasks.validate_user_credit_cards',
-        'schedule': 60.0,
+    "validate_user_credit_cards": {
+        "task": "fcdcom.billing.tasks.validate_user_credit_cards",
+        "schedule": 60.0,
     },
 }
 # https://docs.celeryq.dev/en/stable/userguide/configuration.html#worker-send-task-events
@@ -321,4 +321,4 @@ SOCIALACCOUNT_FORMS = {"signup": "fcdcom.users.forms.UserSocialSignupForm"}
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-STRIPE_SECRET_KEY=env("STRIPE_SECRET_KEY")
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
