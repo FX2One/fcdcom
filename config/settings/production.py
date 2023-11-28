@@ -189,3 +189,4 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
