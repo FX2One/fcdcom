@@ -124,7 +124,7 @@ ANYMAIL = {
     "MAILGUN_API_KEY": env("MAILGUN_API_KEY"),
     "MAILGUN_SENDER_DOMAIN": env("MAILGUN_DOMAIN"),
     "MAILGUN_API_URL": "https://api.eu.mailgun.net/v3",
-    }
+}
 
 # LOGGING
 # ------------------------------------------------------------------------------
@@ -189,4 +189,4 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY")
+STRIPE_SECRET_KEY = env("STRIPE_SECRET_KEY", default="")
