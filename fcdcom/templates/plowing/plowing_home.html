@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% block content %}
+  <h1>Plowing services</h1>
+  <p>{% trans 'Available services' %}</p>
+  <ul>
+    {% for service in avail_services %}
+      <li><a href="{% url 'plowing:service' service.pk %}">{{ service.name }}</a></li>
+    {% endfor %}
+  </ul>
+  <p>{% trans 'Your requests' %}</p>
+  <ul>
+    {% for req in avail_requests %}
+      <li> Request {{ req.service.name }} ({{ req.get_status_display }})</li>
+      <a href="{% url 'plowing:request' req.pk %}?action=accept"> {% trans 'Accept' %}</a>
+      <a href="{% url 'plowing:request' req.pk %}?action=reject"> Reject</a>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
