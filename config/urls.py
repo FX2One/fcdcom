@@ -13,6 +13,7 @@ urlpatterns = [
     # User management
     path("users/", include("fcdcom.users.urls", namespace="users")),
     path("billing/", include("fcdcom.billing.urls", namespace="billing")),
+    path("plowing/", include("fcdcom.plowing.urls", namespace="plowing")),
     path("accounts/", include("allauth.urls")),
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
